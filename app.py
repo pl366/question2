@@ -17,13 +17,13 @@ app.config['MONGO_URI'] = 'mongodb://admin:123456p@ds017175.mlab.com:17175/grame
 mongo = PyMongo(app)
 
 
-@app.route('/')
-@cross_origin()
-def landing():
-	return "/student : to enter details\n /students : to see all user entries"
+# @app.route('/')
+# @cross_origin()
+# def landing():
+# 	return "/student : to enter details\n /students : to see all user entries"
 
 
-@app.route('/student', methods=['POST','GET'])
+@app.route('/', methods=['POST','GET'])
 @cross_origin()
 def student():
 	if request.method == 'POST':
